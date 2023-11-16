@@ -66,6 +66,9 @@ export default function Blog() {
                 gallery {
                     url
                 }
+                brand{
+                    name
+                }
                
             }
         }
@@ -129,15 +132,18 @@ export default function Blog() {
    </div>
      <div style={{ width:'75vW', marginLeft:'25vW' }}>
       
-     <div style={{ paddingTop:'50px', paddingBottom:'50px', paddingRight:'50px', display: 'flex', flexWrap: 'wrap', gap:'3%', rowGap:'3vH'}} class="flex-container" id="flexContainer">
+     <div style={{ paddingTop:'50px', paddingBottom:'50px', paddingRight:'50px', display: 'flex',gap:'1%'}} class="flex-container" id="flexContainer">
+    <div style={{position:'fixed',bottom:0,right:0}}>
     <h1>{post?.title}</h1>
-    <h1>{post?.id}</h1>
-
-    <h1>{post?.brand}</h1>
-
+                 <Link href={{
+    pathname: '/brandpage/'+ post.brand?.name
+  }}> 
+    <h1>{post?.brand?.name}</h1>
+       </Link> 
+    </div>
     {post?.gallery?.map((o,i)=>{
         return(
-            <img class="projCover" src={o.url}/>
+            <img class="galleryImg" src={o.url}/>
 
         )
     })}
