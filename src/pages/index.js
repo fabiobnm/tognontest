@@ -71,7 +71,7 @@ export default function Blog() {
     </div>
     <div class="menu">
     <Link href="/projects">
-    <h3 style={{textDecoration: 'underline', textUnderlineOffset: '5px', textDecorationThickness: '1px'}}>PROJECTS</h3>  
+    <h3>PROJECTS</h3>  
     </Link>
     <Link href="/collectible">
       <h3>COLLECTIBLE</h3> 
