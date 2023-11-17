@@ -87,7 +87,7 @@ export default function Blog() {
       
      <div class="flex-container" id="projectsContainer">
 
-<img class='indexCover' src='https://media.graphassets.com/Wk0ohOR7Tpyfxp4TuFEN'/>
+<img class='indexCover' src='https://media.graphassets.com/UN5e9AyYTfe4OkU4iE0C'/>
 
     
 
