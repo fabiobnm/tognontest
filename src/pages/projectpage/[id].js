@@ -111,14 +111,14 @@ export default function Blog() {
 
   return (
 <div>
-   <div style={{width:'25vW', height:'100vH',position:'fixed'}}>
-   <Link href="/">
+<div class='header'>
+   <div class='logo'><Link href="/">
     <img class='logoImg' src="/LogoTognon.png"/>
     </Link>
-
-    <div class="divButton">
+    </div>
+    <div class="menu">
     <Link href="/projects">
-    <h3>PROJECTS</h3>  
+    <h3 style={{textDecoration: 'underline', textUnderlineOffset: '5px', textDecorationThickness: '1px'}}>PROJECTS</h3>  
     </Link>
     <Link href="/collectible">
       <h3>COLLECTIBLE</h3> 
@@ -126,17 +126,17 @@ export default function Blog() {
 
       <Link href="/about">
        <h3>ABOUT</h3>  
-       </Link> 
+       </Link>   
+        </div>
 
-      </div>
    </div>
-     <div style={{ width:'75vW', marginLeft:'25vW' }}>
+     <div class='contentArea'>
       
      <div style={{ paddingTop:'50px', paddingBottom:'50px', paddingRight:'50px', display: 'flex',gap:'1%'}} class="flex-container" id="flexContainer">
-    <div style={{position:'fixed',bottom:0,right:0}}>
+    <div style={{position:'fixed',bottom:0,right:0, padding:'2vw'}}>
     <h1>{post?.title}</h1>
                  <Link href={{
-    pathname: '/brandpage/'+ post.brand?.name
+    pathname: '/brandpage/'+ post?.brand?.name
   }}> 
     <h1>{post?.brand?.name}</h1>
        </Link> 
