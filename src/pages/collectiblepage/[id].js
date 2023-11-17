@@ -71,12 +71,12 @@ export default function Blog() {
 
   return (
 <div>
-   <div style={{width:'25vW', height:'100vH',position:'fixed'}}>
-   <Link href="/">
+   <div class='header'>
+   <div class='logo'><Link href="/">
     <img class='logoImg' src="/LogoTognon.png"/>
     </Link>
-
-    <div class="divButton">
+    </div>
+    <div class="menu">
     <Link href="/projects">
     <h3>PROJECTS</h3>  
     </Link>
@@ -86,20 +86,24 @@ export default function Blog() {
 
       <Link href="/about">
        <h3>ABOUT</h3>  
-       </Link> 
+       </Link>   
+        </div>
 
-      </div>
    </div>
-     <div style={{ width:'75vW', marginLeft:'25vW' }}>
+     <div class='contentArea'>
       
-     <div style={{ paddingTop:'50px', paddingBottom:'50px', paddingRight:'50px', display: 'flex', flexWrap: 'wrap', gap:'3%', rowGap:'3vH'}} class="flex-container" id="flexContainer">
-
-     <h1>{post?.title}</h1>
-    <h1>{post?.id}</h1>
-
+     <div style={{ paddingTop:'50px', paddingBottom:'50px', paddingRight:'50px', display: 'flex',gap:'1%'}} class="flex-container" id="flexContainer">
+    <div style={{position:'fixed',bottom:0,right:0, padding:'2vw'}}>
+    <h1>{post?.title}</h1>
+                 <Link href={{
+    pathname: '/brandpage/'+ post?.brand?.name
+  }}> 
+    <h1>{post?.brand?.name}</h1>
+       </Link> 
+    </div>
     {post?.gallery?.map((o,i)=>{
         return(
-            <img class="projCover" src={o.url}/>
+            <img class="galleryImg" src={o.url}/>
 
         )
     })}
@@ -107,6 +111,8 @@ export default function Blog() {
 
     
       </div>
+
+   
      </div>
 
      </div>
