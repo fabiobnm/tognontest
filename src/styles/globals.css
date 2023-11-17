@@ -96,7 +96,6 @@ img{
 #projectsContainer{
   padding-top: 50px;
     padding-bottom: 50px;
-    padding-right: 50px;
     display: flex;
     flex-wrap: wrap;
     gap: 3vH;
