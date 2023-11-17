@@ -19,16 +19,29 @@
 body {
   color: black;
   background: white;
+  width: 100vw;
+  height: 100vh;
+
+  
+}
+.header{
+  display: flex;
+  width: 25vw;
+  height: 100vh;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2vw;
 }
 img{
   max-width: none;
 }
 
-.projCover{
-  max-width: 100%;
-  height: 200px;
-  width: 300px;
-  object-fit: cover;
+
+.flex-item img {
+  aspect-ratio: 3/2; /* Set the aspect ratio to 3:2 */
+  width: 100%;
+  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
 }
 .galleryImg{
 
@@ -36,20 +49,14 @@ img{
   
 }
 
-.projCoverPort{
-
-  height: 300px;
-  width: 200px;
-  object-fit: cover;
+.flex-item .projCoverPort {
+  aspect-ratio: 2/3; /* Set the aspect ratio to 3:2 */
+  width: 100%;
+  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
 }
 
-.divButton{
-  width: 25vW;
-  /* bottom: 5vH; */
-  /* margin-left: 15%; */
-  bottom: 0;
-  padding: 15%;
-  position: absolute;
+.menu{
+
 }
 
 .logoImg{
@@ -68,4 +75,61 @@ img{
   height: 85vH;
     width: auto;
     object-fit: cover;
+}
+#text-about{
+ padding: 50px 50px 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vh 3%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.contentArea{
+  width: 75vw;
+  margin-left: 25vw;
+}
+#projectsContainer{
+  padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vH;
+    row-gap: 3vH;
+}
+
+
+@media only screen and (max-width: 768px) {
+.menu{
+  display: flex;
+  gap: 2vh;
+  margin-top: 12%;
+}
+.header{
+      display: flex;
+    width: 25vw;
+height: 10vh;
+  width: 100vw;
+  flex-direction: row;
+}
+
+.contentArea{
+  width: 100vw;
+  height: 100vh;
+  margin-left: 0vw;
+}
+#projectsContainer{
+  padding: 35vw 10vw 10vw 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vH;
+    row-gap: 3vH;
+    flex-direction: column;
+}
+#text-about{
+  padding: 5vh;
+}
 }
