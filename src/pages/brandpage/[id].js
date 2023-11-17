@@ -109,12 +109,12 @@ export default function Blog() {
 
   return (
 <div>
-   <div style={{width:'25vW', height:'100vH',position:'fixed'}}>
-   <Link href="/">
+<div class='header'>
+   <div class='logo'><Link href="/">
     <img class='logoImg' src="/LogoTognon.png"/>
     </Link>
-
-    <div class="divButton">
+    </div>
+    <div class="menu">
     <Link href="/projects">
     <h3>PROJECTS</h3>  
     </Link>
@@ -124,11 +124,12 @@ export default function Blog() {
 
       <Link href="/about">
        <h3>ABOUT</h3>  
-       </Link> 
+       </Link>   
+        </div>
 
-      </div>
    </div>
-     <div style={{ width:'75vW', marginLeft:'25vW' }}>
+     <div class='contentArea'>
+      
       
      <div style={{ paddingTop:'50px', paddingBottom:'50px', paddingRight:'50px', display: 'flex', flexWrap: 'wrap', gap:'3%', rowGap:'3vH'}} class="flex-container" id="flexContainer">
      {post?.map((o,i)=>{
@@ -139,7 +140,7 @@ export default function Blog() {
     pathname: '/projectpage/'+ o.slug
   }}> 
  <img class='projCover' src={o.gallery[0].url}/>   
-            <h1>{o.title}</h1>
+            <h1 style={{textAlign:'right'}}>{o.title}</h1>
 
 </Link>
             
